@@ -23,7 +23,6 @@ class UserProfileDetails extends StatelessWidget {
     double topPadding = 19.h;
     double cardMarginLeft = 32.w;
     double cardMarginTop = 19.h;
-    double cardMarginRight = 20.w;
     double cardBorderRadius = 16.0.w;
 
     return BlocListener<UserBloc, UserState>(
@@ -50,7 +49,7 @@ class UserProfileDetails extends StatelessWidget {
             margin: EdgeInsets.fromLTRB(
               cardMarginLeft,
               cardMarginTop,
-              cardMarginRight,
+              0,
               0,
             ),
             child: Column(

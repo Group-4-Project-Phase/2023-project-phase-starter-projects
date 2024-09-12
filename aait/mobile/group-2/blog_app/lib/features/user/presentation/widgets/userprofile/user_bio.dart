@@ -20,6 +20,7 @@ class UserBio extends StatelessWidget {
     double titleSpacing = 11.h;
     double verticalPadding = 24.0.h;
     double bottomSpacing = 20.0.h;
+    double cardMarginRight = 20.w;
 
     return Column(
       children: [
@@ -40,14 +41,19 @@ class UserBio extends StatelessWidget {
         SizedBox(
           height: titleSpacing,
         ),
-        Text(
-          userInfo,
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            fontSize: textFontSize,
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.w100,
-            color: AppColors.darkBlue,
+        Container(
+          margin: EdgeInsets.only(
+            right: cardMarginRight,
+          ),
+          child: Text(
+            userInfo,
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              fontSize: textFontSize,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w100,
+              color: AppColors.darkBlue,
+            ),
           ),
         ),
         SizedBox(
