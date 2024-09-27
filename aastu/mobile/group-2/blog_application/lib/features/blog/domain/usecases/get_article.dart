@@ -6,23 +6,20 @@ import 'package:equatable/equatable.dart';
 
 import '../../../../core/usecases/usecase.dart';
 
-class GetArticle extends UseCase<Article , GetArticleParams>{
+class GetArticle extends UseCase<Article, GetArticleParams> {
   final ArticleRepository repository;
   GetArticle(this.repository);
 
   @override
-  Future<Either<Failure, Article>> call(GetArticleParams param) async{
+  Future<Either<Failure, Article>> call(GetArticleParams param) async {
     return await repository.getArticle(param.id);
   }
-
-  
 }
 
-class GetArticleParams extends Equatable{
+class GetArticleParams extends Equatable {
   final String id;
   const GetArticleParams(this.id);
-  
+
   @override
   List<Object?> get props => [id];
-
 }
